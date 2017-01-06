@@ -309,7 +309,7 @@ public class AppUtilities
 
 ## Privacy Policy
 
-This app sample will request the follwoing permissions which require user approval and are used for demonstration purposes only:
+This app sample will request the follwoing permissions below which require user approval and are used for demonstration purposes only. No data is shared or used outside this app.
 
 * WRITE_EXTERNAL_STORAGE
 * BODY_SENSORS
