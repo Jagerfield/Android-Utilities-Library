@@ -8,7 +8,7 @@ While developing Andorid apps, I gathered the functions that I repeatedly used a
 
 The images below are taken from running the app on a simulator.
 
-<img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/permissions.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/memory.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/network.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/device.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/battery.png" width="160"/>
+<img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/utilities/permissions.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/utilities/memory.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/utilities/network.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/utilities/device.png" width="160"/>  &#160;  <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/utilities/battery.png" width="160"/>
 
 The sample app for **Android Utilities Library** is available on Google Play:
 
