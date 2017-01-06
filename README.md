@@ -91,10 +91,9 @@ IGetPermissionResult contains the following functions:
 
 ### Managing permissions
 
-```
-. First, check the status of your app permissions.
+- First, check the status of your app permissions.
 The functions (getPermissionResults) and (requestPermissions) can either take an array or a string as an argument.
-```
+
 ```
   PermissionsUtil permissionsUtil = AppUtilities.getPermissionUtil(activity);
   IGetPermissionResult result = permissionsUtil.getPermissionResults(PERMISSIONS_ARRAY);
@@ -116,9 +115,9 @@ The functions (getPermissionResults) and (requestPermissions) can either take an
             Log.e(C.TAG_LIB, "Following permissions are missing : " + missingPermissions);
         }
 ```
-```
-. The function (requestPermissions) in the previous paragraph will call the (checkSelfPermission), and the user will get to choose to accept or deny permissions. The system will then make a callback in (onRequestPermissionsResult) in the MainActivity.
-```
+
+- The function (requestPermissions) in the previous paragraph will call the (checkSelfPermission), and the user will get to choose to accept or deny permissions. The system will then make a callback in (onRequestPermissionsResult) in the MainActivity.
+
 ```
     @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
@@ -146,9 +145,9 @@ The functions (getPermissionResults) and (requestPermissions) can either take an
           }
      }
 ```
-```
-. For SDK >= 23, if you want to let the library to show the user a dialog to manage missing permissions, the use this code:  
-```
+
+- For SDK >= 23, if you want to let the library to show the user a dialog to manage missing permissions, the use this code:  
+
 ```
 @Override
     public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults)
