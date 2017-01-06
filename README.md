@@ -31,7 +31,7 @@ In the app build.gradle add the following:
   ```
   dependencies
   {
-     compile 'com.github.Jagerfield:Android-Utilities-library:v2.0'
+     compile 'com.github.Jagerfield:Android-Utilities-library:v2.1'
   }
   ```
 
