@@ -8,7 +8,7 @@ While developing Andorid apps, I gathered the functions that I repeatedly used a
 
 The images below are taken from running the app on a simulator.
 
-<img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/permissions.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/memory.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/network.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/device.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/battery.png" width="160"/>
+<img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/permissions.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/memory.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/network.png" width="160"/> &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/device.png" width="160"/>  &#160;     <img src="https://github.com/Jagerfield/Android-Utilities-Lib/blob/master/msc/pictures/utilities/battery.png" width="160"/>
 
 The sample app for **Android Utilities Library** is available on Google Play:
 
@@ -60,9 +60,7 @@ To test the Permissions utility:
    a.Click on "Check Permissions" button and check the final status.
 ```
 
-<img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/1.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/utilities/permissions.png" width="160"/>  &#160;  <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/2.png" width="160"/> &#160;  <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/3.png" width="160"/> &#160;  <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/4.png" width="160"/>  &#160;
-
-<img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/5.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/6.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities/blob/master/msc/pictures/permissions/7.png" width="160"/>
+<img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/1.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/2.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/3.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/4.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/5.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/6.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/7.png" width="160"/>
 
 <br>
 
