@@ -1,16 +1,3 @@
 <resources>
 
-    <color name="red">#FFDC3C00</color>
-    <color name="green">#FF6DAE8E</color>
-    <color name="list_grey_800_50p">#E2666699</color>
-    <color name="list_blue">#E2688AD8</color>
-    <color name="list_green">#E258B760</color>
-    <color name="list_reddish_orange">#E2F27B4E</color>
-    <color name="sand">#E2DDBB76</color>
-    <color name="light_grey">#FFEDEDED</color>
-    <color name="yellow_orange">#FFFFCC00</color>
-    <color name="light_green">#FFb6e8da</color>
-    <color name="selected_tab">#FFcce5cc</color>
-    <color name="white">#FFFFFF</color>
-
 </resources>

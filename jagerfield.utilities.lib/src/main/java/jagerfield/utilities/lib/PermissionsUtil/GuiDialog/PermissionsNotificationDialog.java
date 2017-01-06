@@ -3,6 +3,7 @@ package jagerfield.utilities.lib.PermissionsUtil.GuiDialog;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Handler;
@@ -207,21 +208,21 @@ public class PermissionsNotificationDialog
         {
             msg = PERMISSIONS_GRANTED;
             tv_getting_permission.setText(msg);
-            tv_getting_permission.setTextColor(getThisColor(R.color.green));
+            tv_getting_permission.setTextColor(Color.parseColor("#FF6DAE8E"));
             bt_checkPermissions.setVisibility(View.VISIBLE);
         }
         else if (!gotPermissions && !permissionsResults.getNeverAskAgainPermissionsList().isEmpty() && permissionsResults.getUserDeniedPermissionsList().isEmpty())
         {
             msg = PERMISSIONS_MISSING;
             tv_getting_permission.setText(msg);
-            tv_getting_permission.setTextColor(getThisColor(R.color.red));
+            tv_getting_permission.setTextColor(Color.parseColor("#FFDC3C00"));
             bt_checkPermissions.setVisibility(View.GONE);
         }
         else if (!gotPermissions && !permissionsResults.getUserDeniedPermissionsList().isEmpty())
         {
             msg = PERMISSIONS_MISSING;
             tv_getting_permission.setText(msg);
-            tv_getting_permission.setTextColor(getThisColor(R.color.red));
+            tv_getting_permission.setTextColor(Color.parseColor("#FFDC3C00"));
             bt_checkPermissions.setVisibility(View.GONE);
         }
     }

@@ -30,7 +30,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Click to view denied permissions"
-                android:textColor="@color/green"
+                android:textColor="#FF6DAE8E"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:text="Enable following permissions from Settings"
-                android:textColor="@color/green"
+                android:textColor="#FF6DAE8E"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
