@@ -146,7 +146,7 @@ The functions (getPermissionResults) and (requestPermissions) can either take an
      }
 ```
 
-- For SDK >= M, if you want to let the library to show the user a dialog to manage missing permissions, the use this code:  
+- For SDK >= M, if you want to let the library to show the user a dialog to manage missing permissions, then use this code:  
 
 ```
 @Override
