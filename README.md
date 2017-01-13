@@ -35,8 +35,6 @@ In the app build.gradle add the following:
   }
   ```
 
-<br>
-
 ##Checking Permissions
 To test the Permissions utility:
 ```
@@ -62,7 +60,6 @@ To test the Permissions utility:
 
 <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/1.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/2.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/3.png" width="160"/> &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/4.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/5.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/6.png" width="160"/>  &#160; <img src="https://github.com/Jagerfield/Android-Utilities-Library/blob/master/msc/pictures/permissions/7.png" width="160"/>
 
-<br>
 
 ##Permissions Util
 
@@ -188,8 +185,6 @@ The functions (getPermissionResults) and (requestPermissions) can either take an
     }
 ```
 
-<br>
-
 ##Memory Util
 
 Accessing a utility fucntion example:
@@ -207,7 +202,6 @@ Available functions:
 | Total Internal Memory Size      | ```getTotalInternalMemorySize()``` | long |
 | Total External Memory Size      | ```getTotalExternalMemorySize()``` | String |
 
-<br>
 
 ##Battery Util
 
@@ -228,7 +222,6 @@ Available functions:
 | Charging Source      | ```getChargingSource()``` | String |
 | Battery Technology      | ```getBatteryTechnology()``` | String |
 
-<br>
 
 ##Device Info Util
 
@@ -275,7 +268,6 @@ Available functions:
 | User Agent | ```getUserAgent(activity)``` | String |
 | GSF Id | ```getDeviceUtil().getGSFId(activity)``` | String |
 
-<br>
 
 ##Network Util
 
@@ -303,7 +295,6 @@ Available functions:
 | Bluetooth MAC    | ```getBluetoothMAC(activity)``` | String |
 | Wifi Mac Address   | ```getWifiMacAddress(activity)``` | String |
 
-<br>
 
 ##SoftKeyborad Util
 
@@ -318,7 +309,6 @@ Available functions:
 | :------------- |:-------------| :-----|
 | Set Soft Keyboard      | ```setSoftKeyboard(Activity activity, boolean mode)``` | void |
 
-<br>
 
 ## How to use?
 
