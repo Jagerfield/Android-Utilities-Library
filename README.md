@@ -31,7 +31,7 @@ In the app build.gradle add the following:
   ```
   dependencies
   {
-     compile 'com.github.Jagerfield:Android-Utilities-library:v2.2'
+     compile 'com.github.Jagerfield:Android-Utilities-library:v2.3'
   }
   ```
 
@@ -291,7 +291,7 @@ Available functions:
 | Network Class      | ```getNetworkClass(activity)``` | String |
 | Is Nfc Present      | ```isNfcPresent(activity)``` | boolean |
 | Is Nfc Enabled      | ```isNfcEnabled(activity)``` | boolean |
-| Internet Connection Status      | ```getInternetConnectionStatus(activity)``` | String |
+| Internet Connection Type      | ```getInternetConnectionType(activity)``` | String |
 | Has Internet Connection      | ```hasInternetConnection(activity)``` | boolean |
 | Bluetooth MAC    | ```getBluetoothMAC(activity)``` | String |
 | Wifi Mac Address   | ```getWifiMacAddress(activity)``` | String |
@@ -302,7 +302,7 @@ Available functions:
 Accessing a utility fucntion example:
 
 ```
-AppUtilities.getSoftKeyboard().setSoftKeyboard(Activity activity, boolean mode);
+AppUtilities.setSoftKeyboard(Activity activity, boolean mode);
 ```
 Available functions:
 
