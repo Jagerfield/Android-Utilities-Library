@@ -2,6 +2,7 @@ package jagerfield.utilities.lib.NetworkUtil;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
@@ -19,6 +20,8 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+
+import jagerfield.utilities.lib.AppUtilities;
 import jagerfield.utilities.lib.C;
 import jagerfield.utilities.lib.PermissionsUtil.PermissionsUtil;
 
@@ -91,6 +94,27 @@ public class NetworkUtil
                 return "TYPE_NOT_FOUND";
         }
 
+    }
+
+    public final boolean hasInternetConnection(Activity activity)
+    {
+        String type = getInternetConnectionStatus(activity);
+
+        switch(type)
+        {
+            case "TYPE_WIFI":
+                return true;
+            case "TYPE_WIMAX":
+                return true;
+            case "TYPE_MOBILE":
+                return true;
+            case "TYPE_NOT_CONNECTED":
+                return false;
+            case "TYPE_NOT_FOUND":
+                return false;
+            default:
+                return false;
+        }
     }
 
     private final boolean pingGoogle(Activity activity)
