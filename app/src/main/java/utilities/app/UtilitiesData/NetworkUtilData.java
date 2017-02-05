@@ -23,7 +23,7 @@ public class NetworkUtilData
         ArrayList<PropertyModel> properties = new ArrayList<>();
         D d = D.newInstance();
 
-        d.addProperty(properties, "Internet Connection Status", AppUtilities.getNetworkUtil().getInternetConnectionStatus(activity));
+        d.addProperty(properties, "Internet Connection Status", AppUtilities.getNetworkUtil().getInternetConnectionType(activity));
 
         d.addProperty(properties, "Is Nfc Present", AppUtilities.getNetworkUtil().isNfcPresent(activity));
 

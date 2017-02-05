@@ -10,9 +10,9 @@ import jagerfield.utilities.lib.SoftKeyboradUtil.SoftKeyboardUtil;
 
 public class AppUtilities
 {
-    public static void getSoftKeyboard()
+    public static void setSoftKeyboard(Activity activity, boolean mode)
     {
-        SoftKeyboardUtil.newInstance();
+        SoftKeyboardUtil.newInstance().setSoftKeyboard(activity, mode);
     }
 
     public static PermissionsUtil getPermissionUtil(Activity activity)

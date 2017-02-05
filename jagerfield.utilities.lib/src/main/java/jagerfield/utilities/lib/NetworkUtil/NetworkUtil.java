@@ -2,7 +2,6 @@ package jagerfield.utilities.lib.NetworkUtil;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
@@ -21,7 +20,6 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import jagerfield.utilities.lib.AppUtilities;
 import jagerfield.utilities.lib.C;
 import jagerfield.utilities.lib.PermissionsUtil.PermissionsUtil;
 
@@ -38,7 +36,7 @@ public class NetworkUtil
     /* Gets internet connectivity status and also pings to make sure it is available.
     *
     */
-    public final String getInternetConnectionStatus(Activity activity)
+    public final String getInternetConnectionType(Activity activity)
     {
         ConnectivityManager cm = (ConnectivityManager) activity.getSystemService(Activity.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -98,7 +96,7 @@ public class NetworkUtil
 
     public final boolean hasInternetConnection(Activity activity)
     {
-        String type = getInternetConnectionStatus(activity);
+        String type = getInternetConnectionType(activity);
 
         switch(type)
         {
