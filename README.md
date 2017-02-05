@@ -31,7 +31,7 @@ In the app build.gradle add the following:
   ```
   dependencies
   {
-     compile 'com.github.Jagerfield:Android-Utilities-library:v2.1'
+     compile 'com.github.Jagerfield:Android-Utilities-library:v2.2'
   }
   ```
 
@@ -292,6 +292,7 @@ Available functions:
 | Is Nfc Present      | ```isNfcPresent(activity)``` | boolean |
 | Is Nfc Enabled      | ```isNfcEnabled(activity)``` | boolean |
 | Internet Connection Status      | ```getInternetConnectionStatus(activity)``` | String |
+| Has Internet Connection      | ```hasInternetConnection(activity)``` | boolean |
 | Bluetooth MAC    | ```getBluetoothMAC(activity)``` | String |
 | Wifi Mac Address   | ```getWifiMacAddress(activity)``` | String |
 
