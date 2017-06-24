@@ -3,6 +3,7 @@ package utilities.app;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity
          */
         checkAppPermissions(C.PERMISSIONS_ARRAY);
 
+        Snackbar.make(viewPager,"sdfs",Snackbar.LENGTH_LONG).show();
     }
 
     private void checkAppPermissions(String[] permissionsArray)
@@ -126,7 +128,7 @@ public class MainActivity extends AppCompatActivity
     {
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-//        viewPagerAdapter.addTab(D.PERMISSIONS_TITLE, new PermissionsFragment());
+//      viewPagerAdapter.addTab(D.PERMISSIONS_TITLE, new PermissionsFragment());
         viewPagerAdapter.addTab(D.MEMORY_INFO_TAB, ShowInfoFragment.newInstance(D.MEMORY_INFO_TAB));
         viewPagerAdapter.addTab(D.NETWORK_INFO_TITLE, ShowInfoFragment.newInstance(D.NETWORK_INFO_TITLE));
         viewPagerAdapter.addTab(D.DEVICE_INFO_TITLE, ShowInfoFragment.newInstance(D.DEVICE_INFO_TITLE));
@@ -142,7 +144,19 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onTabSelected(TabLayout.Tab tab)
             {
-                tab.getIcon().setColorFilter(ContextCompat.getColor(MainActivity.this, R.color.white), PorterDuff.Mode.SRC_IN);
+                if (tab==null)
+                {
+                    return;
+                }
+
+                try
+                {
+                    tab.getIcon().setColorFilter(ContextCompat.getColor(MainActivity.this, R.color.white), PorterDuff.Mode.SRC_IN);
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
             }
 
             @Override
