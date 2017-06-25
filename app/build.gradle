@@ -15,8 +15,8 @@ android {
         applicationId "jagerfield.utilities"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 17
-        versionName "2.7"
+        versionCode 18
+        versionName "2.8"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,23 +31,20 @@ android {
 }
 
 buildscript {
-
     repositories {
-        google()
-        jcenter ()
+        jcenter()
+        maven { url 'https://maven.google.com' }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.0-alpha4'
 
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter ()
+        jcenter()
+        maven { url 'https://maven.google.com' }
     }
 }
 
