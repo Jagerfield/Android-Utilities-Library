@@ -1,21 +1,32 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'Android Utilities Library'
+            keyPassword '12346578'
+            storeFile file('E:/VAULTS/Dropbox/1/Google Publish/Android Utilities Library/Android Utilities Library.jks')
+            storePassword '12346578'
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.0"
     defaultConfig {
         applicationId "jagerfield.utilities"
         minSdkVersion 16
         targetSdkVersion 25
-        versionCode 14
-        versionName "2.4"
+        versionCode 16
+        versionName "2.6"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
+    }
+    productFlavors {
     }
 }
 

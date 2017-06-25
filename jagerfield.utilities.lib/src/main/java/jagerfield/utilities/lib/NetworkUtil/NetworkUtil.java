@@ -265,7 +265,21 @@ public class NetworkUtil
             return null;
         }
 
-        WifiManager wifiManager = (WifiManager) activity.getSystemService(Activity.WIFI_SERVICE);
+        WifiManager wifiManager = null;
+
+        try
+        {
+            wifiManager = (WifiManager) activity.getApplicationContext().getSystemService(Activity.WIFI_SERVICE);
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+
+        if(wifiManager==null)
+        {
+            return false;
+        }
 
         return wifiManager.isWifiEnabled();
     }

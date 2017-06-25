@@ -5,7 +5,7 @@ import android.app.Activity;
 import java.util.ArrayList;
 
 import jagerfield.utilities.lib.AppUtilities;
-import utilities.app.D;
+import utilities.app.FragmentConfigUtil;
 
 public class BatteryUtilData
 {
@@ -23,23 +23,23 @@ public class BatteryUtilData
     public ArrayList<PropertyModel> getDeviceBatteryProperties(Activity activity)
     {
         ArrayList<PropertyModel> properties = new ArrayList<>();
-        D d = D.newInstance();
+        FragmentConfigUtil fragmentConfigUtil = FragmentConfigUtil.newInstance();
 
-        d.addProperty(properties, "Battery Percent", AppUtilities.getBatteryUtil().getBatteryPercent(activity));
+        fragmentConfigUtil.addProperty(properties, "Battery Percent", AppUtilities.getBatteryUtil().getBatteryPercent(activity));
 
-        d.addProperty(properties, "Is Phone Charging", AppUtilities.getBatteryUtil().isPhoneCharging(activity));
+        fragmentConfigUtil.addProperty(properties, "Is Phone Charging", AppUtilities.getBatteryUtil().isPhoneCharging(activity));
 
-        d.addProperty(properties, "Battery Health", AppUtilities.getBatteryUtil().getBatteryHealth(activity));
+        fragmentConfigUtil.addProperty(properties, "Battery Health", AppUtilities.getBatteryUtil().getBatteryHealth(activity));
 
-        d.addProperty(properties, "Battery Technology", AppUtilities.getBatteryUtil().getBatteryTechnology(activity));
+        fragmentConfigUtil.addProperty(properties, "Battery Technology", AppUtilities.getBatteryUtil().getBatteryTechnology(activity));
 
-        d.addProperty(properties, "Battery Temperature", AppUtilities.getBatteryUtil().getBatteryTemperature(activity));
+        fragmentConfigUtil.addProperty(properties, "Battery Temperature", AppUtilities.getBatteryUtil().getBatteryTemperature(activity));
 
-        d.addProperty(properties, "Battery Voltage", AppUtilities.getBatteryUtil().getBatteryVoltage(activity));
+        fragmentConfigUtil.addProperty(properties, "Battery Voltage", AppUtilities.getBatteryUtil().getBatteryVoltage(activity));
 
-        d.addProperty(properties, "Charging Source", AppUtilities.getBatteryUtil().getChargingSource(activity));
+        fragmentConfigUtil.addProperty(properties, "Charging Source", AppUtilities.getBatteryUtil().getChargingSource(activity));
 
-        d.addProperty(properties, "Is Battery Present", AppUtilities.getBatteryUtil().isBatteryPresent(activity));
+        fragmentConfigUtil.addProperty(properties, "Is Battery Present", AppUtilities.getBatteryUtil().isBatteryPresent(activity));
 
         return properties;
     }

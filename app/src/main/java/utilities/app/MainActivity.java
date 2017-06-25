@@ -3,11 +3,9 @@ package utilities.app;
 import android.graphics.PorterDuff;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,21 +13,19 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
-
-import java.util.ArrayList;
-
 import jagerfield.utilities.lib.AppUtilities;
 import jagerfield.utilities.lib.C;
 import jagerfield.utilities.lib.PermissionsUtil.GuiDialog.PermissionsManager;
 import jagerfield.utilities.lib.PermissionsUtil.PermissionsUtil;
 import jagerfield.utilities.lib.PermissionsUtil.Results.IGetPermissionResult;
-import utilities.app.Fragments.ShowInfoFragment;
-
+import utilities.app.Fragments.DataFragment;
 
 public class MainActivity extends AppCompatActivity
 {
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private ViewPagerAdapter viewPagerAdapter;
+    private static int current_fragment_pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -69,7 +65,7 @@ public class MainActivity extends AppCompatActivity
             /**
              * There are missing permissions ask for them
              */
-            permissionsUtil.requestPermissions(D.PERMISSIONS_ARRAY);
+            permissionsUtil.requestPermissions(FragmentConfigUtil.PERMISSIONS_ARRAY);
         }
         else if (!result.isGranted() && Build.VERSION.SDK_INT < Build.VERSION_CODES.M)
         {
@@ -77,8 +73,8 @@ public class MainActivity extends AppCompatActivity
              * For SDK < M, there are permissions missing in the manifest
              */
             String missingPermissions = TextUtils.join(", ", result.getMissingInManifest_ForSdkBelowM()).trim();
-            D.showAlertMessage(this, "Manifest Missing Permissions", missingPermissions);
-            Log.e(D.TAG_LIB, "Following permissions are missing : " + missingPermissions);
+            FragmentConfigUtil.showAlertMessage(this, "Manifest Missing Permissions", missingPermissions);
+            Log.e(FragmentConfigUtil.TAG_LIB, "Following permissions are missing : " + missingPermissions);
         }
 
     }
@@ -126,16 +122,43 @@ public class MainActivity extends AppCompatActivity
 
     private void launchViewPager()
     {
-        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
 
-//      viewPagerAdapter.addTab(D.PERMISSIONS_TITLE, new PermissionsFragment());
-        viewPagerAdapter.addTab(D.MEMORY_INFO_TAB, ShowInfoFragment.newInstance(D.MEMORY_INFO_TAB));
-        viewPagerAdapter.addTab(D.NETWORK_INFO_TITLE, ShowInfoFragment.newInstance(D.NETWORK_INFO_TITLE));
-        viewPagerAdapter.addTab(D.DEVICE_INFO_TITLE, ShowInfoFragment.newInstance(D.DEVICE_INFO_TITLE));
-        viewPagerAdapter.addTab(D.BATTERY_INFO_TITLE, ShowInfoFragment.newInstance(D.BATTERY_INFO_TITLE));
+//      viewPagerAdapter.addTab(FragmentConfigUtil.PERMISSIONS_TITLE, new PermissionsFragment());
+        viewPagerAdapter.addTab(FragmentConfigUtil.MEMORY_INFO_TAB, DataFragment.newInstance(FragmentConfigUtil.MEMORY_INFO_TAB));
+        viewPagerAdapter.addTab(FragmentConfigUtil.NETWORK_INFO_TITLE, DataFragment.newInstance(FragmentConfigUtil.NETWORK_INFO_TITLE));
+        viewPagerAdapter.addTab(FragmentConfigUtil.DEVICE_INFO_TITLE, DataFragment.newInstance(FragmentConfigUtil.DEVICE_INFO_TITLE));
+        viewPagerAdapter.addTab(FragmentConfigUtil.BATTERY_INFO_TITLE, DataFragment.newInstance(FragmentConfigUtil.BATTERY_INFO_TITLE));
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels)
+            {
+                String str = "";
+            }
+
+            @Override
+            public void onPageSelected(final int position)
+            {
+                if (viewPagerAdapter==null)
+                {
+                    return;
+                }
+
+                DataFragment fragment = (DataFragment) viewPagerAdapter.getFragmentModel(position).fragment;
+                fragment.updateData(viewPagerAdapter.getFragmentModel(position).title);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state)
+            {
+                String str = "";
+            }
+        });
+
 
         /**
          * Selected tab text color can be made from styles
@@ -200,49 +223,7 @@ public class MainActivity extends AppCompatActivity
             R.drawable.battery_white
     };
 
-    public class ViewPagerAdapter extends FragmentPagerAdapter
-    {
-        private final ArrayList<FragModel> fragmentList = new ArrayList<>();
 
-        public ViewPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-
-        @Override
-        public Fragment getItem(int position)
-        {
-            return fragmentList.get(position).fragment;
-        }
-
-        @Override
-        public int getCount() {
-            return fragmentList.size();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position)
-        {
-
-            return fragmentList.get(position).title;
-        }
-
-        public void addTab(String title, Fragment fragment)
-        {
-            fragmentList.add(new FragModel(title, fragment));
-        }
-
-        class FragModel
-        {
-            Fragment fragment;
-            String title;
-
-            public FragModel(String title, Fragment fragment) {
-                this.fragment = fragment;
-                this.title = title;
-            }
-        }
-    }
 }
 
 

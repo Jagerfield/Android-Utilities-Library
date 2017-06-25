@@ -3,7 +3,7 @@ package utilities.app.UtilitiesData;
 import android.app.Activity;
 import java.util.ArrayList;
 import jagerfield.utilities.lib.AppUtilities;
-import utilities.app.D;
+import utilities.app.FragmentConfigUtil;
 
 public class DeviceUtilData
 {
@@ -21,77 +21,77 @@ public class DeviceUtilData
     public ArrayList<PropertyModel> getDeviceProperties(Activity activity)
     {
         ArrayList<PropertyModel> properties = new ArrayList<>();
-        D d = D.newInstance();
+        FragmentConfigUtil fragmentConfigUtil = FragmentConfigUtil.newInstance();
 
-        d.addProperty(properties, "Release Build Version", AppUtilities.getDeviceUtil().getReleaseBuildVersion());
+        fragmentConfigUtil.addProperty(properties, "Release Build Version", AppUtilities.getDeviceUtil().getReleaseBuildVersion());
 
-        d.addProperty(properties, "Device Name", AppUtilities.getDeviceUtil().getDeviceName());
+        fragmentConfigUtil.addProperty(properties, "Device Name", AppUtilities.getDeviceUtil().getDeviceName());
 
-        d.addProperty(properties, "Build Version Code Name", AppUtilities.getDeviceUtil().getBuildVersionCodeName());
+        fragmentConfigUtil.addProperty(properties, "Build Version Code Name", AppUtilities.getDeviceUtil().getBuildVersionCodeName());
 
-        d.addProperty(properties, "Manufacturer", AppUtilities.getDeviceUtil().getManufacturer());
+        fragmentConfigUtil.addProperty(properties, "Manufacturer", AppUtilities.getDeviceUtil().getManufacturer());
 
-        d.addProperty(properties, "Model", AppUtilities.getDeviceUtil().getModel());
+        fragmentConfigUtil.addProperty(properties, "Model", AppUtilities.getDeviceUtil().getModel());
 
-        d.addProperty(properties, "Product", AppUtilities.getDeviceUtil().getProduct());
+        fragmentConfigUtil.addProperty(properties, "Product", AppUtilities.getDeviceUtil().getProduct());
 
-        d.addProperty(properties, "Finger print", AppUtilities.getDeviceUtil().getFingerprint());
+        fragmentConfigUtil.addProperty(properties, "Finger print", AppUtilities.getDeviceUtil().getFingerprint());
 
-        d.addProperty(properties, "Hardware", AppUtilities.getDeviceUtil().getHardware());
+        fragmentConfigUtil.addProperty(properties, "Hardware", AppUtilities.getDeviceUtil().getHardware());
 
-        d.addProperty(properties, "RadioVer", AppUtilities.getDeviceUtil().getRadioVer());
+        fragmentConfigUtil.addProperty(properties, "RadioVer", AppUtilities.getDeviceUtil().getRadioVer());
 
-        d.addProperty(properties, "Device", AppUtilities.getDeviceUtil().getDevice());
+        fragmentConfigUtil.addProperty(properties, "Device", AppUtilities.getDeviceUtil().getDevice());
 
-        d.addProperty(properties, "Board", AppUtilities.getDeviceUtil().getBoard());
+        fragmentConfigUtil.addProperty(properties, "Board", AppUtilities.getDeviceUtil().getBoard());
 
-        d.addProperty(properties, "Display Version", AppUtilities.getDeviceUtil().getDisplayVersion());
+        fragmentConfigUtil.addProperty(properties, "Display Version", AppUtilities.getDeviceUtil().getDisplayVersion());
 
-        d.addProperty(properties, "Build Host", AppUtilities.getDeviceUtil().getBuildHost());
+        fragmentConfigUtil.addProperty(properties, "Build Host", AppUtilities.getDeviceUtil().getBuildHost());
 
-        d.addProperty(properties, "Build Time", AppUtilities.getDeviceUtil().getBuildTime(), 1, "sec");
+        fragmentConfigUtil.addProperty(properties, "Build Time", AppUtilities.getDeviceUtil().getBuildTime(), 1, "sec");
 
-        d.addProperty(properties, "Build User", AppUtilities.getDeviceUtil().getBuildUser());
+        fragmentConfigUtil.addProperty(properties, "Build User", AppUtilities.getDeviceUtil().getBuildUser());
 
-        d.addProperty(properties, "Serial Number", AppUtilities.getDeviceUtil().getSerial());
+        fragmentConfigUtil.addProperty(properties, "Serial Number", AppUtilities.getDeviceUtil().getSerial());
 
-        d.addProperty(properties, "OS Version", AppUtilities.getDeviceUtil().getOSVersion());
+        fragmentConfigUtil.addProperty(properties, "OS Version", AppUtilities.getDeviceUtil().getOSVersion());
 
-        d.addProperty(properties, "Language", AppUtilities.getDeviceUtil().getLanguage());
+        fragmentConfigUtil.addProperty(properties, "Language", AppUtilities.getDeviceUtil().getLanguage());
 
-        d.addProperty(properties, "Sdk Version", AppUtilities.getDeviceUtil().getSdkVersion(), 1, "");
+        fragmentConfigUtil.addProperty(properties, "Sdk Version", AppUtilities.getDeviceUtil().getSdkVersion(), 1, "");
 
-        d.addProperty(properties, "Screen Density", AppUtilities.getDeviceUtil().getScreenDensity(activity));
+        fragmentConfigUtil.addProperty(properties, "Screen Density", AppUtilities.getDeviceUtil().getScreenDensity(activity));
 
-        d.addProperty(properties, "Screen Height", AppUtilities.getDeviceUtil().getScreenHeight(activity), 1 , "Pixels");
+        fragmentConfigUtil.addProperty(properties, "Screen Height", AppUtilities.getDeviceUtil().getScreenHeight(activity), 1 , "Pixels");
 
-        d.addProperty(properties, "Screen Width", AppUtilities.getDeviceUtil().getScreenWidth(activity), 1 , "Pixels");
+        fragmentConfigUtil.addProperty(properties, "Screen Width", AppUtilities.getDeviceUtil().getScreenWidth(activity), 1 , "Pixels");
 
-        d.addProperty(properties, "Version Name", AppUtilities.getDeviceUtil().getVersionName(activity));
+        fragmentConfigUtil.addProperty(properties, "Version Name", AppUtilities.getDeviceUtil().getVersionName(activity));
 
-        d.addProperty(properties, "Version Code", AppUtilities.getDeviceUtil().getVersionCode(activity));
+        fragmentConfigUtil.addProperty(properties, "Version Code", AppUtilities.getDeviceUtil().getVersionCode(activity));
 
-        d.addProperty(properties, "Package Name", AppUtilities.getDeviceUtil().getPackageName(activity));
+        fragmentConfigUtil.addProperty(properties, "Package Name", AppUtilities.getDeviceUtil().getPackageName(activity));
 
-        d.addProperty(properties, "Activity Name", AppUtilities.getDeviceUtil().getActivityName(activity));
+        fragmentConfigUtil.addProperty(properties, "Activity Name", AppUtilities.getDeviceUtil().getActivityName(activity));
 
-        d.addProperty(properties, "App Name", AppUtilities.getDeviceUtil().getAppName(activity));
+        fragmentConfigUtil.addProperty(properties, "App Name", AppUtilities.getDeviceUtil().getAppName(activity));
 
-        d.addProperty(properties, "Is Running On Emulator", AppUtilities.getDeviceUtil().isRunningOnEmulator());
+        fragmentConfigUtil.addProperty(properties, "Is Running On Emulator", AppUtilities.getDeviceUtil().isRunningOnEmulator());
 
-        d.addProperty(properties, "Device Ringer Mode", AppUtilities.getDeviceUtil().getDeviceRingerMode(activity));
+        fragmentConfigUtil.addProperty(properties, "Device Ringer Mode", AppUtilities.getDeviceUtil().getDeviceRingerMode(activity));
 
-        d.addProperty(properties, "Is Device Rooted", AppUtilities.getDeviceUtil().isDeviceRooted());
+        fragmentConfigUtil.addProperty(properties, "Is Device Rooted", AppUtilities.getDeviceUtil().isDeviceRooted());
 
-        d.addProperty(properties, "Android Id", AppUtilities.getDeviceUtil().getAndroidId(activity));
+        fragmentConfigUtil.addProperty(properties, "Android Id", AppUtilities.getDeviceUtil().getAndroidId(activity));
 
-        d.addProperty(properties, "Install Source", AppUtilities.getDeviceUtil().getInstallSource(activity));
+        fragmentConfigUtil.addProperty(properties, "Install Source", AppUtilities.getDeviceUtil().getInstallSource(activity));
 
-        d.addProperty(properties, "User Agent", AppUtilities.getDeviceUtil().getUserAgent(activity));
+        fragmentConfigUtil.addProperty(properties, "User Agent", AppUtilities.getDeviceUtil().getUserAgent(activity));
 
-        d.addProperty(properties, "Is App Installed", AppUtilities.getDeviceUtil().isAppInstalled(AppUtilities.getDeviceUtil().getPackageName(activity), activity));
+        fragmentConfigUtil.addProperty(properties, "Is App Installed", AppUtilities.getDeviceUtil().isAppInstalled(AppUtilities.getDeviceUtil().getPackageName(activity), activity));
 
-        d.addProperty(properties, "GSF Id", AppUtilities.getDeviceUtil().getGSFId(activity));
+        fragmentConfigUtil.addProperty(properties, "GSF Id", AppUtilities.getDeviceUtil().getGSFId(activity));
 
         return properties;
     }

@@ -13,7 +13,7 @@ import utilities.app.UtilitiesData.NetworkUtilData;
 import utilities.app.UtilitiesData.PropertyModel;
 
 
-public class D
+public class FragmentConfigUtil
 {
     public static final String PERMISSIONS_TITLE = "Permissions";
     public static final String MEMORY_INFO_TAB = "Memory Info";
@@ -45,14 +45,14 @@ public class D
         }
     }
 
-    public D()
+    public FragmentConfigUtil()
     {
 
     }
 
-    public static D newInstance()
+    public static FragmentConfigUtil newInstance()
     {
-        D obj = new D();
+        FragmentConfigUtil obj = new FragmentConfigUtil();
         return obj;
     }
 
@@ -82,22 +82,22 @@ public class D
 
         switch(title)
         {
-            case D.MEMORY_INFO_TAB:
+            case FragmentConfigUtil.MEMORY_INFO_TAB:
                 fragmentData.propertiesList = MemoryUtilData.newInstance().getDeviceMemoryProperties(activity);
                 fragmentData.valueTextColor = ContextCompat.getColor(activity, R.color.list_grey_800_50p);
                 break;
 
-            case D.NETWORK_INFO_TITLE:
+            case FragmentConfigUtil.NETWORK_INFO_TITLE:
                 fragmentData.propertiesList = NetworkUtilData.getInstance().getDeviceNetworkProperties(activity);
                 fragmentData.valueTextColor = ContextCompat.getColor(activity, R.color.list_blue);
                 break;
 
-            case D.DEVICE_INFO_TITLE:
+            case FragmentConfigUtil.DEVICE_INFO_TITLE:
                 fragmentData.propertiesList = DeviceUtilData.getInstance().getDeviceProperties(activity);
                 fragmentData.valueTextColor = ContextCompat.getColor(activity, R.color.list_green);
                 break;
 
-            case D.BATTERY_INFO_TITLE:
+            case FragmentConfigUtil.BATTERY_INFO_TITLE:
                 fragmentData.propertiesList = BatteryUtilData.getInstance().getDeviceBatteryProperties(activity);
                 fragmentData.valueTextColor = ContextCompat.getColor(activity, R.color.list_reddish_orange);
                 break;
