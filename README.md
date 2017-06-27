@@ -1,3 +1,6 @@
+[![Release](https://jitpack.io/v/douglasjunior/AndroidBluetoothLibrary.svg)](https://jitpack.io/#Jagerfield/Android-Utilities-Library)
+[![Downloads](https://jitpack.io/#Jagerfield/Android-Utilities-Library/month.svg)](#download)
+
 # Android Utilities Library
 
 While developing Andorid apps, I gathered the functions that I repeatedly used and kept them in a utility class. The number of these functions grew, in addition there was need to manage the “Permissions” in a clean easy way. Therefore, I created a library which currently provides the following utilities: **Permissions**, **Memory**, **Battery**, **Device Info**, **Network**, **SoftKeyboard**.
