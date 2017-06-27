@@ -1,5 +1,5 @@
-[![Release](https://jitpack.io/v/douglasjunior/AndroidBluetoothLibrary.svg)](https://jitpack.io/#Jagerfield/Android-Utilities-Library)
-[![Downloads](https://jitpack.io/#Jagerfield/Android-Utilities-Library/month.svg)](#download)
+[![Release](https://jitpack.io/v/Jagerfield/Android-Utilities-Library.svg)](https://jitpack.io/#Jagerfield/Android-Utilities-Library)
+[![Downloads](https://jitpack.io/v/Jagerfield/Android-Utilities-Library.svg/month.svg)](#download)
 
 # Android Utilities Library
 
