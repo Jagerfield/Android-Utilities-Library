@@ -431,7 +431,7 @@ public class NetworkUtil
             return "Missing permission ACCESS_WIFI_STATE";
         }
 
-        WifiManager manager = (WifiManager) activity.getSystemService(Activity.WIFI_SERVICE);
+        WifiManager manager = (WifiManager) activity.getApplicationContext().getSystemService(Activity.WIFI_SERVICE);
         WifiInfo info = manager.getConnectionInfo();
         String address = info.getMacAddress();
         return address;
