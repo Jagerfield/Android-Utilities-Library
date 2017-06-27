@@ -31,7 +31,8 @@ In the app build.gradle add the following:
   ```
   dependencies
   {
-     compile 'com.github.Jagerfield:Android-Utilities-library:v2.3'
+     compile ('com.github.Jagerfield:Android-Utilities-Library:v3.0') {
+        exclude group: 'com.android.support' }
   }
   ```
 
