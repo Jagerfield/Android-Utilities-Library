@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Android-Utilities-Library.iml" filepath="$PROJECT_DIR$/Android-Utilities-Library.iml" />
+      <module fileurl="file://C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\Android-Utilities-Library.iml" filepath="C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\Android-Utilities-Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\app\app.iml" filepath="C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jagerfield.utilities.lib/jagerfield.utilities.lib.iml" filepath="$PROJECT_DIR$/jagerfield.utilities.lib/jagerfield.utilities.lib.iml" />
+      <module fileurl="file://C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\jagerfield.utilities.lib\jagerfield.utilities.lib.iml" filepath="C:\Users\Sense\Documents\GitHub\Android-Utilities-Library\jagerfield.utilities.lib\jagerfield.utilities.lib.iml" />
     </modules>
   </component>
 </project>
